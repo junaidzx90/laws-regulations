@@ -1,0 +1,418 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+ 
+ span.lrbtn {
+    padding: var(--lr_year_items_paddings);
+    background: var(--lr_static);
+    color: #ffffff;
+    font-size: var(--lr_year_items_font_size);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: pointer;
+    display: inline-block;
+}
+.years_btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 5px;
+}
+span.lrbtn.lractive {
+    background: var(--lr_selected);
+}
+span.lrbtn:hover,.lr_download:hover {
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    opacity: .5;
+}
+
+.lr_header {
+    margin-bottom: 20px;
+}
+
+div#lr_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 30px;
+}
+.lr_ministries {
+    width: 30%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-right: 1px solid #ddd;
+    padding-right: 30px;
+}
+div#lr_contents {
+    width: 70%;
+    padding-left: 30px;
+}
+.select_ministry,.selecttitle{
+    display: none;
+}
+.lr_ministries ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.lr_ministries ul li {
+    font-size: var(--lr_ministry_items_font_size);
+    margin: var(--lr_ministry_item_margin);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    color: rgb(43, 43, 43);
+    cursor: pointer;
+    padding: var(--lr_ministry_item_padding);
+    position: relative;
+    list-style: none !important;
+}
+.lr_ministries ul li:hover{
+    color: var(--lr_static);
+}
+.lr_ministries ul li:hover:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    background: var(--lr_selected);
+}
+.lr_ministries ul li.lractive {
+    color: #fff;
+    text-decoration: none;
+    background: var(--lr_selected);
+    list-style: none !important;
+}
+.lr_docs_wrap {
+    margin-top: 20px;
+}
+.lr_docs_wrap .lr_years {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+}
+.lr_documents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+}
+.document_placehholder img {
+    width: 100% !important;
+}
+.searchField {
+    margin: 20px 0px;
+}
+.searchField .searchBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 4px;
+    border-radius: 25px;
+    padding-right: 13px;
+    max-height: 40px !important;
+    box-shadow: 0px 0px 5px -2px black;
+}
+span.lr_searchBtn {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    line-height: 25px;
+    display: flex;
+    border-radius: 50%;
+    background: #95d0ee;
+    padding: 7px;
+}
+span.clearSearch {
+    line-height: 5px;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+input#lr_searchInp {
+    all: unset;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0px 5px;
+    width: 100%;
+    max-height: 22px !important;
+}
+.heading_ttl {
+    font-size: var(--lr_section_heading_font_size) !important;
+    margin-bottom: 10px !important;
+    color: var(--lr_section_heading_text_color) !important;
+}
+.lr_docs_wrap .lr_document {
+    width: 32%;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 4px -1px black;
+    box-shadow: 1px 1px 4px -1px black;
+    height: -webkit-auto;
+    height: -moz-auto;
+    height: auto;
+    position: relative;
+    padding-bottom: 70px;
+    overflow: hidden;
+    position: relative;
+}
+.document_placehholder {
+    max-height: 155px !important;
+    overflow: hidden;
+}
+.lr_docs_wrap .lr_document .lr_doc_info h3.lr_title {
+    font-size: var(--lr_doc_title_font_size);
+    margin: 0;
+    color: var(--lr_doc_title_color);
+    font-weight: var(--lr_doc_title_font_weight);
+    text-transform:initial;
+}
+p.lr_date {
+    margin: 0;
+    font-size: 12px;
+    color: var(--lr_doc_date_color);
+    margin-top: 5px;
+    text-transform: var(--lr_doc_date_uppercase);
+    font-weight: var(--lr_doc_date_font_weight) !important;
+}
+.lr_doc_info {
+    padding: 10px;
+}
+p.lr_download_counts {
+    margin: 0;
+    font-size: var(--lr_download_counter_font_size);
+    margin-top: 5px;
+    color: var(--lr_download_counter_font_color);
+}
+button.lr_download {
+    all: unset;
+    padding: var(--lr_download_btn_paddings);
+    background-color: var(--lr_static);
+    color: #fff;
+    font-size: var(--lr_download_btn_font_size);
+    cursor: pointer;
+    border-radius: var(--lr_download_btn_radius);
+}
+.lr_downloads {
+    background: #f3f3f3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 8px 0px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.lrdisabled {
+    opacity: .3;
+    pointer-events: none;
+}
+button.lr_download:disabled {
+    opacity: .3;
+}
+.no-docs {
+    background: #ff00000d;
+    width: 100%;
+    padding: 10px;
+    border-left: 5px solid red;
+}
+div#lr-loader-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    background-color: #bbbbbb2b;
+    z-index: 9999;
+}
+.loadmore-wrap {
+    text-align: center;
+    margin-top: 50px;
+}
+span.lr-loademorebtn {
+    padding: var(--lr_loadmore_btn_paddings);
+    background: var(--lr_loadmore_btn_bg_color);
+    border-radius: 3px;
+    color: #fff;
+    font-size: var(--lr_loadmore_btn_font_size);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: pointer;
+}
+span.lr-loademorebtn:hover{
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    opacity: .8;
+}
+.openSelectItems{
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+@media only screen and (max-width: 780px) {
+    div#lr_container{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .lr_ministries{
+        border-right: unset;
+    }
+    .lr_ministries,  div#lr_contents {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+    .lr_ministries .ministrySelectBox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        display: none;
+        z-index: 99999;
+        background-color: rgb(0 0 0 / 52%);
+        -webkit-backdrop-filter: blur(2px);
+                backdrop-filter: blur(2px);
+    }
+    .lr_ministries .ministrySelectBox .innerMinistry{
+        width: 80%;
+        background: #fff;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    .selecttitle{
+        display: block;
+    }
+    .select_ministry {
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font-size: 16px;
+        background: var(--lr_static);
+        color: #fff;
+        padding: 5px 10px;
+    }
+    .lr_ministries ul {
+        max-height: 80vh;
+        overflow-y: scroll;
+    }
+    .select_ministry span.lr-right-arrow {
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        padding: 5px;
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        margin-top: -6px;
+    }
+    .lr_ministries ul li:hover:after{
+        display: none;
+    }
+    .selecttitle h3 {
+        background: var(--lr_selected);
+        color: #fff !important;
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font-size: 18px !important;
+        font-weight: 600;
+        margin: 0;
+        padding: 20px;
+    }
+    .lr_ministries ul li.lractive {
+        color: var(--lr_selected);
+        text-decoration: none;
+        background: transparent;
+    }
+    .lr_ministries ul li {
+        border-bottom: 1px solid #ddd;
+        margin: 0;
+        padding: var(--lr_ministry_items_padding_mobile);
+    }
+    .lr_ministries ul li:last-child{
+        border-bottom: none;
+    }
+    .lr_docs_wrap .lr_document .lr_doc_info h3.lr_title {
+        font-size: var(--lr_doc_title_font_size_mbl);
+    }
+}
+@media only screen and (max-width: 660px) {
+    .lr_docs_wrap .lr_document{
+        width: 48%;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .lr_docs_wrap .lr_document{
+        width: 100%;
+    }
+}

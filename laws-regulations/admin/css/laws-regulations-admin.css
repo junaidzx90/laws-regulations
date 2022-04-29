@@ -1,0 +1,33 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+#lr_document{
+    position: relative;
+}
+.lr_file_previews {
+    min-height: 160px;
+}
+span.lr_document_btn{
+  cursor: pointer;
+  user-select: none;
+  color: #2271b1;
+}
+
+.lr_filearea {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    backdrop-filter: blur(1px);
+    background: #f3f3f394;
+}
+
+img#lr_pdf_view {
+    width: 100% !important;
+}
